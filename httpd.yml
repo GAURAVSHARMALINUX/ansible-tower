@@ -1,0 +1,13 @@
+---
+- hosts: all
+  become: False
+  gather_facts: False
+  tasks:
+    - name: Installing the web server.
+      yum:
+        name: httpd
+        state: latest
+    - name: staring httpd service
+      service:
+        name: httpd
+        state: started
