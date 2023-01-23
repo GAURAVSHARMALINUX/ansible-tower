@@ -10,4 +10,4 @@
     - name: staring httpd service
       service:
         name: httpd
-        state: started
+        state: restarted
