@@ -11,7 +11,7 @@
       copy:
              src: index.html
              dest: /var/www/html/index.html
-             mode: 644
+             mode: 0644
              owner: apache
              group: apache
     - name: staring httpd service
