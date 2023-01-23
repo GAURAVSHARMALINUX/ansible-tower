@@ -7,6 +7,14 @@
       yum:
         name: httpd
         state: latest
+
+    - name: Copy index file.
+      copy:
+             src: index.html
+             dest: /var/www/html/index.html
+             mode: 644
+             owner: apache
+             group: apache
     - name: staring httpd service
       service:
         name: httpd
